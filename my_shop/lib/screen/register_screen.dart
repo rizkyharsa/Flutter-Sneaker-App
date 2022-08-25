@@ -12,9 +12,19 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const BackButton(color: Colors.white),
-      ),
+      // appBar: AppBar(
+      //   leading: Builder(
+      //     builder: (BuildContext context) {
+      //       return IconButton(
+      //         icon: const Icon(Icons.arrow_back),
+      //         onPressed: () {
+      //           Scaffold.of(context).openDrawer();
+      //         },
+      //         tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      //       );
+      //     },
+      //   ),
+      // ),
       resizeToAvoidBottomInset: false,
       body: Container(
         padding: const EdgeInsets.all(30.0),

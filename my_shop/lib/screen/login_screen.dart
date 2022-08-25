@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_shop/screen/home_screen.dart';
 import 'package:my_shop/screen/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -79,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
               color: Colors.blueAccent,
               textColor: Colors.white,
               elevation: 5,
-              onPressed: _onPress,
+              onPressed: _onLogin,
               child: const Text('Login'),
             ),
             const SizedBox(
@@ -106,8 +107,10 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void _onPress() {
-    ('Press');
+  void _onLogin() {
+    ('Login');
+    Navigator.push(
+      context, MaterialPageRoute(builder: (context) => const HomePage()));
   }
 
   void _onRegister() {

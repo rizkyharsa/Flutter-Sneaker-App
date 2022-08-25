@@ -12,10 +12,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   startSplashScreen() async {
     var duration = const Duration(seconds: 5);
-    return Timer(duration, () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const LoginPage()));
-    });
+    return Timer(
+      duration,
+      () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const LoginPage()));
+      },
+    );
   }
 
   @override
@@ -29,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
             'assets/splash.png',
             scale: 1,
           ),
-          const SizedBox( 
+          const SizedBox(
             height: 20,
           ),
         ],
