@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_shop/screen/home_screen.dart';
+//import 'package:my_shop/screen/home_screen.dart';
 import 'package:my_shop/screen/register_screen.dart';
+import 'package:my_shop/widget/navbottombar.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -110,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
   void _onLogin() {
     ('Login');
     Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const HomePage()));
+      context, MaterialPageRoute(builder: (context) => const NavBottom()));
   }
 
   void _onRegister() {
