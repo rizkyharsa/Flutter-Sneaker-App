@@ -1,6 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:my_shop/screen/home_screen.dart';
+import 'package:my_shop/screen/home/home_screen.dart';
 import 'package:my_shop/screen/list_screen.dart';
 import 'package:my_shop/screen/profile_screen.dart';
 import 'package:my_shop/screen/search_screen.dart';

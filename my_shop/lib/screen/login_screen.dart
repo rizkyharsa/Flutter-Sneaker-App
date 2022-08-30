@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center, //NEW
           children: <Widget>[
             Image.asset(
-              'assets/login.png',
+              'assets/images/login.png',
               width: 180,
               height: 180,
             ),

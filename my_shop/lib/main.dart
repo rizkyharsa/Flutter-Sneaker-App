@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: const Color.fromARGB(255, 33, 150, 243),
         primarySwatch: Colors.blue,
+        fontFamily: 'Varela',
       ),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
