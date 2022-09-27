@@ -42,3 +42,29 @@ class PopularProduct extends StatelessWidget {
     );
   }
 }
+
+
+
+    // return Scaffold(
+    //   body: Container(
+    //     padding: const EdgeInsets.all(10),
+    //     child: GridView.builder(
+    //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+    //         crossAxisCount: 2,
+    //         crossAxisSpacing: 8,
+    //         mainAxisSpacing: 8,
+    //         childAspectRatio: 0.7,
+    //       ),
+    //       itemBuilder: (context, index) {
+    //         return ProductCard(
+    //           name: listItem[index].name,
+    //           price: listItem[index].price,
+    //           imageUrl: listItem[index].imageUrl,
+    //           bgColor: listItem[index].bgColor,
+    //           press: () {},
+    //         );
+    //       },
+    //       itemCount: listItem.length,
+    //     ),
+    //   ),
+    // );
