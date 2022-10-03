@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color.fromARGB(255, 33, 150, 243),
         primarySwatch: Colors.blue,
         fontFamily: 'Varela',
+        dividerColor: Colors.black54,
       ),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),

@@ -2,8 +2,8 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:my_shop/screen/home/home_screen.dart';
 import 'package:my_shop/screen/list/list_screen.dart';
-import 'package:my_shop/screen/profile_screen.dart';
-import 'package:my_shop/screen/search_screen.dart';
+import 'package:my_shop/screen/profile/profile_screen.dart';
+//import 'package:my_shop/screen/search_screen.dart';
 
 class NavBottom extends StatefulWidget {
   const NavBottom({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _NavBottomState extends State<NavBottom> {
   int currentTab = 0;
   final _listPage = [
     const HomePage(),
-    const SearchPage(),
+    //const SearchPage(),
     const ListPage(),
     const ProfilePage()
   ];
@@ -35,7 +35,7 @@ class _NavBottomState extends State<NavBottom> {
         style: TabStyle.react,
         items: const [
           TabItem(icon: Icons.home, title: 'Home'),
-          TabItem(icon: Icons.search, title: 'Search'),
+          //TabItem(icon: Icons.search, title: 'Search'),
           TabItem(icon: Icons.list, title: 'Items'),
           TabItem(icon: Icons.person, title: 'Profile'),
         ],

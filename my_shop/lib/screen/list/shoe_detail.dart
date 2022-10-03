@@ -51,7 +51,7 @@ class ShoeDetail extends StatelessWidget {
       body: ListView(
         children: [
           const SizedBox(height: 14),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
               'Shoe',
@@ -63,9 +63,9 @@ class ShoeDetail extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Hero(
               tag: imgAsset,
               child: Container(
@@ -81,11 +81,11 @@ class ShoeDetail extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Text(
-            '$shoePrice',
-              style: TextStyle(
+            shoePrice,
+              style: const TextStyle(
                 fontFamily: 'Varela',
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -97,7 +97,7 @@ class ShoeDetail extends StatelessWidget {
           Center(
             child: Text(
               shoeName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Varela',
                 fontSize: 24,
                 color: Colors.black54,
@@ -108,7 +108,7 @@ class ShoeDetail extends StatelessWidget {
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width - 52,
-              child: Text(
+              child: const Text(
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                 maxLines: 4,
                 textAlign: TextAlign.center,
@@ -139,7 +139,7 @@ class ShoeDetail extends StatelessWidget {
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         FontAwesomeIcons.whatsapp,
                         size: 32,

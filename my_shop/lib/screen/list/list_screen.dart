@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_shop/screen/list/shoe_detail.dart';
 
 import '../../data/item.dart';
@@ -45,7 +44,7 @@ class _ListPageState extends State<ListPage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(bottom: 80),
+        padding: const EdgeInsets.only(bottom: 0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -84,8 +83,8 @@ class _ListPageState extends State<ListPage> {
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.2),
-                spreadRadius: 3.0,
-                blurRadius: 5.0,
+                spreadRadius: 3,
+                blurRadius: 5,
               )
             ],
             color: Colors.white,
@@ -114,7 +113,7 @@ class _ListPageState extends State<ListPage> {
               const SizedBox(height: 8),
               Center(
                 child: Text(
-                  '${item.price}',
+                  item.price,
                   style: const TextStyle(
                     fontFamily: 'Varela',
                     fontSize: 16,
