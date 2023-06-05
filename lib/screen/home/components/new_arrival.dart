@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_shop/constant.dart';
 import 'package:my_shop/data/item.dart';
-import 'package:my_shop/screen/home/components/product_card.dart';
+import 'package:my_shop/widget/product_card.dart';
 import 'title.dart';
 
 class NewArrival extends StatelessWidget {
@@ -32,7 +32,7 @@ class NewArrival extends StatelessWidget {
                   imageUrl: listItem[index].imageUrl,
                   price: listItem[index].price,
                   bgColor: listItem[index].bgColor,
-                  press: () {},
+                  onTap: () {},
                 ),
               ),
             ),

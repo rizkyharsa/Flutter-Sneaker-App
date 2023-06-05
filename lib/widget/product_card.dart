@@ -8,25 +8,33 @@ class ProductCard extends StatelessWidget {
     required this.name,
     required this.price,
     required this.imageUrl,
-    required this.press,
+    required this.onTap,
     required this.bgColor,
   }) : super(key: key);
   final String name;
   final String price;
   final String imageUrl;
-  final VoidCallback press;
+  final VoidCallback onTap;
   final Color bgColor;
+  
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: press,
+      onTap: onTap,
       child: Container(
         width: 154,
         height: 210,
         padding: const EdgeInsets.all(defaultPadding / 2),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+          borderRadius: const BorderRadius.all(Radius.circular(defaultBorderRadius)),
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(0, 2),
+              blurRadius: 5,
+              color: Colors.black.withOpacity(.2)
+            )
+          ]
         ),
         child: Column(
           children: [

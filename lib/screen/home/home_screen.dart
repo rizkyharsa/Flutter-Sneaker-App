@@ -45,31 +45,34 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(
-            parent: AlwaysScrollableScrollPhysics()),
-        padding: const EdgeInsets.all(defaultPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Explore",
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium!
-                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
-            ),
-            const Text(
-              "Best shoes for you",
-              style: TextStyle(fontSize: 18, color: Colors.grey),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: defaultPadding),
-              child: SearchItem(),
-            ),
-            const NewArrival(),
-            const PopularProduct(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
+          padding: const EdgeInsets.all(defaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Explore",
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium!
+                    .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+              ),
+              const Text(
+                "Best shoes for you",
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: defaultPadding),
+                child: SearchItem(),
+              ),
+              const NewArrival(),
+              const PopularProduct(),
+            ],
+          ),
         ),
       ),
     );

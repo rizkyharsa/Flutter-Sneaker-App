@@ -49,39 +49,41 @@ class _ProfilePageState extends State<ProfilePage> {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          ProfileWidget(
-            imagePath: user.imagePath,
-            onClicked: ()async{}
+          ProfileWidget(imagePath: user.imagePath, onClicked: () async {}),
+          const SizedBox(
+            height: 24,
           ),
-          const SizedBox(height: 24,),
           buildName(user),
-          const SizedBox(height: 24,),
+          const SizedBox(
+            height: 24,
+          ),
           NumberWidget(),
         ],
       ),
     );
   }
 
-  Widget buildName(User user)=>Column(
-    children: [
-      Text(
-        user.name,
-        style: TextStyle(
-          fontFamily: 'Varela',
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const SizedBox(height: 4,),
-      Text(
-        user.email,
-        style: TextStyle(
-          fontFamily: 'Varela',
-          fontSize: 16,
-          color: Colors.grey,
-        ),
-      )
-    ],
-  );
-
+  Widget buildName(User user) => Column(
+        children: [
+          Text(
+            user.name,
+            style: TextStyle(
+              fontFamily: 'Varela',
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          Text(
+            user.email,
+            style: TextStyle(
+              fontFamily: 'Varela',
+              fontSize: 16,
+              color: Colors.grey,
+            ),
+          )
+        ],
+      );
 }

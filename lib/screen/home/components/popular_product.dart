@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_shop/constant.dart';
 import 'package:my_shop/data/item.dart';
-import 'package:my_shop/screen/home/components/product_card.dart';
+import 'package:my_shop/widget/product_card.dart';
 import 'package:my_shop/screen/home/components/title.dart';
 
 class PopularProduct extends StatelessWidget {
@@ -32,7 +32,7 @@ class PopularProduct extends StatelessWidget {
                   price: listItem[index].price,
                   imageUrl: listItem[index].imageUrl,
                   bgColor: listItem[index].bgColor,
-                  press: (){},
+                  onTap: (){},
                 ),
               ),
             ),
