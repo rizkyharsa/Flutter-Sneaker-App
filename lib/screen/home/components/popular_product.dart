@@ -26,7 +26,7 @@ class PopularProduct extends StatelessWidget {
             children: List.generate(
               listItem.length,
               (index) => Padding(
-                padding: const EdgeInsets.only(right: defaultPadding),
+                padding: const EdgeInsets.only(right: defaultPadding,top: defaultPadding/2,bottom: defaultPadding/2),
                 child: ProductCard(
                   name: listItem[index].name,
                   price: listItem[index].price,

@@ -26,7 +26,7 @@ class NewArrival extends StatelessWidget {
             children: List.generate(
               listItem.length,
               (index) => Padding(
-                padding: const EdgeInsets.only(right: defaultPadding),
+                padding: const EdgeInsets.only(right: defaultPadding,top: 8,bottom: 8),
                 child: ProductCard(
                   name: listItem[index].name,
                   imageUrl: listItem[index].imageUrl,

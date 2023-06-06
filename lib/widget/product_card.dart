@@ -24,6 +24,7 @@ class ProductCard extends StatelessWidget {
       child: Container(
         width: 154,
         height: 210,
+        margin: const EdgeInsets.only(left: defaultPadding/4),
         padding: const EdgeInsets.all(defaultPadding / 2),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -31,7 +32,7 @@ class ProductCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               offset: const Offset(0, 2),
-              blurRadius: 5,
+              blurRadius: 8,
               color: Colors.black.withOpacity(.2)
             )
           ]

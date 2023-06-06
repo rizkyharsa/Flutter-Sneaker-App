@@ -21,8 +21,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: const Color.fromARGB(255, 33, 150, 243),
-        primarySwatch: Colors.blue,
         fontFamily: 'Varela',
         dividerColor: Colors.black54,
       ),
