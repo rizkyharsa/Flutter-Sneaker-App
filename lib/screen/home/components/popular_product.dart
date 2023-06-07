@@ -12,7 +12,7 @@ class PopularProduct extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+          padding: const EdgeInsets.fromLTRB(defaultPadding, 8, defaultPadding, 8),
           child: SecTitle(
             title: 'Popular',
             seeAll: () {},
@@ -22,12 +22,12 @@ class PopularProduct extends StatelessWidget {
           physics:
               const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           scrollDirection: Axis.horizontal,
-          child: Row(
-            children: List.generate(
-              listItem.length,
-              (index) => Padding(
-                padding: const EdgeInsets.only(right: defaultPadding,top: defaultPadding/2,bottom: defaultPadding/2),
-                child: ProductCard(
+          child: Container(
+            padding: const EdgeInsets.only(bottom: 8,top: 8),
+            child: Row(
+              children: List.generate(
+                listItem.length,
+                (index) => ProductCard(
                   name: listItem[index].name,
                   price: listItem[index].price,
                   imageUrl: listItem[index].imageUrl,

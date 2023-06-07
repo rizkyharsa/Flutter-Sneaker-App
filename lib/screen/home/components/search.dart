@@ -13,11 +13,18 @@ class SearchItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      child: TextFormField(
-        onSaved: (value) {},
+    return Container(
+      margin: const EdgeInsets.fromLTRB(defaultPadding, 4, defaultPadding, 8),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(defaultBorderRadius), boxShadow: [
+        BoxShadow(
+          offset: const Offset(0, 3),
+          blurRadius: 8,
+          color: Colors.black.withOpacity(.2),
+        )
+      ]),
+      child: TextField(
+        onChanged: (value) {},
         decoration: InputDecoration(
-          
           focusColor: black,
           filled: true,
           fillColor: Colors.white,
@@ -25,28 +32,28 @@ class SearchItem extends StatelessWidget {
           border: outlineInputBorder,
           focusedBorder: outlineInputBorder,
           errorBorder: outlineInputBorder,
-          prefixIcon: const Padding(
-            padding: EdgeInsets.all(14),
-            child: Icon(Icons.search)
-          ),
-          suffixIcon: Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: defaultPadding, vertical: defaultPadding / 2),
-            child: SizedBox(
-              width: 54,
-              height: 54,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: black,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                ),
-                onPressed: () {},
-                child: const Icon(Icons.filter_list)
-              ),
+          prefixIcon: Icon(Icons.search),
+          suffixIcon: Container(
+            margin: const EdgeInsets.only(right: 6),
+            height: 30,
+            width: 30,
+            decoration: BoxDecoration(
+              color: black,
+              borderRadius: BorderRadius.circular(defaultBorderRadius),
             ),
+            child: const Icon(Icons.filter_list,size: 20,color: white,),
           ),
+          // ElevatedButton(
+          //   style: ElevatedButton.styleFrom(
+          //     fixedSize: Size(60, 60),
+          //     backgroundColor: black,
+          //     shape: const RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+          //     ),
+          //   ),
+          //   onPressed: () {},
+          //   child: const Icon(Icons.filter_list,size: 20),
+          // ),
         ),
       ),
     );

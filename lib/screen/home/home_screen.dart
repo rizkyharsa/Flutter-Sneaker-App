@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {},
         ),
         title: const Text(
-          'My Shop',
+          'Sneaker Shop',
           style: TextStyle(
             fontFamily: 'Varela',
             fontSize: 18.0,
@@ -50,23 +50,29 @@ class _HomePageState extends State<HomePage> {
           physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics(),
           ),
-          padding: const EdgeInsets.all(defaultPadding),
+          // padding: const EdgeInsets.all(defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Explore",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium!
-                    .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
-              ),
-              const Text(
-                "Best shoes for you",
-                style: TextStyle(fontSize: 18, color: Colors.grey),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(defaultPadding, 8, defaultPadding, 0),
+                child: Text(
+                  "Explore",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium!
+                      .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+                ),
               ),
               const Padding(
-                padding: EdgeInsets.symmetric(vertical: defaultPadding),
+                padding: EdgeInsets.fromLTRB(defaultPadding, 0, defaultPadding, 8),
+                child: Text(
+                  "Best shoes for you",
+                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: defaultPadding/2),
                 child: SearchItem(),
               ),
               const NewArrival(),

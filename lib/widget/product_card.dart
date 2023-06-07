@@ -24,10 +24,10 @@ class ProductCard extends StatelessWidget {
       child: Container(
         width: 154,
         height: 210,
-        margin: const EdgeInsets.only(left: defaultPadding/4),
-        padding: const EdgeInsets.all(defaultPadding / 2),
+        margin: const EdgeInsets.only(left: defaultPadding),
+        // padding: const EdgeInsets.all(defaultPadding / 2),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: white,
           borderRadius: const BorderRadius.all(Radius.circular(defaultBorderRadius)),
           boxShadow: [
             BoxShadow(
@@ -38,6 +38,7 @@ class ProductCard extends StatelessWidget {
           ]
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: double.infinity,
@@ -53,22 +54,24 @@ class ProductCard extends StatelessWidget {
             const SizedBox(
               height: defaultPadding / 2,
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    name,
-                    style: const TextStyle(color: Colors.black),
-                  ),
-                ),
-                const SizedBox(
-                  width: defaultPadding / 4,
-                ),
-                Text(
-                  "\$ $price",
-                  style: Theme.of(context).textTheme.titleSmall,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Text(
+                "\$ $price",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                )
+              ),
+            ),
+            const SizedBox(
+              height: defaultPadding / 4,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Text(
+                name,
+                style: const TextStyle(color: Colors.black54),
+              ),
             ),
             // Row(
             //   children: [
