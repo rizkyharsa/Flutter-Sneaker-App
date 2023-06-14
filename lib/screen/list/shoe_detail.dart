@@ -8,7 +8,7 @@ class ShoeDetail extends StatelessWidget {
   const ShoeDetail({super.key, required this.imgAsset, required this.shoePrice, required this.shoeName});
 
   final String imgAsset;
-  final String shoePrice;
+  final String shoePrice; 
   final String shoeName;
 
   @override

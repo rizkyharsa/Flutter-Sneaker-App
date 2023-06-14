@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_shop/constant.dart';
 import 'package:my_shop/screen/list/shoe_detail.dart';
+import 'package:my_shop/widget/product_card.dart';
 
 import '../../data/item.dart';
 
@@ -16,7 +17,7 @@ class _ListPageState extends State<ListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: white,
         elevation: 0.0,
         centerTitle: true,
         leading: IconButton(
@@ -27,7 +28,7 @@ class _ListPageState extends State<ListPage> {
           onPressed: () {},
         ),
         title: const Text(
-          'List',
+          'Favorite',
           style: TextStyle(
             fontFamily: 'Varela',
             fontSize: 18.0,
@@ -53,17 +54,24 @@ class _ListPageState extends State<ListPage> {
             // childAspectRatio: 0.7,
           ),
           itemBuilder: (context, index) {
-            return Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(defaultBorderRadius),
-                ),
-              ),
-              child: Column(
-                children: [
-                   
-                ],
-              ),
+            return ProductCard(
+              name: listItem[index].name,
+              price: listItem[index].price,
+              imageUrl: listItem[index].imageUrl,
+              bgColor: listItem[index].bgColor,
+              isLoved: listItem[index].isLoved,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShoeDetail(
+                      imgAsset: listItem[index].imageUrl,
+                      shoePrice: listItem[index].price,
+                      shoeName: listItem[index].name,
+                    ),
+                  ),
+                );
+              },
             );
           },
           itemCount: listItem.length,

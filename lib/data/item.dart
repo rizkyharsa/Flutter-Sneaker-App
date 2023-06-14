@@ -6,12 +6,14 @@ class Item {
   final String price;
   final String imageUrl;
   final Color bgColor;
+  bool isLoved;
 
   Item({
     required this.id,
     required this.name,
     required this.price,
     required this.imageUrl,
+    required this.isLoved,
     this.bgColor = const Color.fromARGB(255, 208, 208, 212),
   });
 }
@@ -23,6 +25,7 @@ final List<Item> listItem = [
     price: '92',
     imageUrl: 'assets/images/nike1.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
   ),
   Item(
     id: 2,
@@ -30,6 +33,7 @@ final List<Item> listItem = [
     price: '178',
     imageUrl: 'assets/images/nike2.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: false,
   ),
   Item(
     id: 3,
@@ -37,6 +41,7 @@ final List<Item> listItem = [
     price: '130',
     imageUrl: 'assets/images/nike3.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
   ),
   Item(
     id: 4,
@@ -44,6 +49,7 @@ final List<Item> listItem = [
     price: '137',
     imageUrl: 'assets/images/nike4.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
   ),
   Item(
     id: 5,
@@ -51,6 +57,7 @@ final List<Item> listItem = [
     price: '207',
     imageUrl: 'assets/images/nike5.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: false,
   ),
   Item(
     id: 6,
@@ -58,5 +65,6 @@ final List<Item> listItem = [
     price: '115',
     imageUrl: 'assets/images/nike6.png',
     bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
   ),
 ];

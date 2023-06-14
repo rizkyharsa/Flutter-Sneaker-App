@@ -29,9 +29,10 @@ class NewArrival extends StatelessWidget {
                 listItem.length,
                 (index) => ProductCard(
                   name: listItem[index].name,
-                  imageUrl: listItem[index].imageUrl,
                   price: listItem[index].price,
+                  imageUrl: listItem[index].imageUrl,
                   bgColor: listItem[index].bgColor,
+                  isLoved: listItem[index].isLoved,
                   onTap: () {
                     Navigator.push(
                       context,
