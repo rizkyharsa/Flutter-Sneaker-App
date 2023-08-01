@@ -68,3 +68,38 @@ final List<Item> listItem = [
     isLoved: true,
   ),
 ];
+
+final List<Item> favoriteItem =[
+  Item(
+    id: 1,
+    name: 'Nike Air Force 1',
+    price: '92',
+    imageUrl: 'assets/images/nike1.png',
+    bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
+  ),
+  Item(
+    id: 3,
+    name: 'Nike Air Force 1 Mid',
+    price: '130',
+    imageUrl: 'assets/images/nike3.png',
+    bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
+  ),
+  Item(
+    id: 4,
+    name: 'Nike Air Max 97 Premium',
+    price: '137',
+    imageUrl: 'assets/images/nike4.png',
+    bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
+  ),
+  Item(
+    id: 6,
+    name: 'Nike SB Dunk High Pro PRM',
+    price: '115',
+    imageUrl: 'assets/images/nike6.png',
+    bgColor: const Color.fromARGB(255, 208, 208, 212),
+    isLoved: true,
+  ),
+];

@@ -19,11 +19,22 @@ class PopularProduct extends StatelessWidget {
             seeAll: () {},
           ),
         ),
+        Container(
+          margin: const EdgeInsets.fromLTRB(defaultPadding, 0, defaultPadding, 8),
+          height: 80,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(defaultBorderRadius),
+            image: DecorationImage(
+              image: AssetImage("assets/images/nikeBanner.jpg"),fit: BoxFit.cover,
+            )
+          ),
+        ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           scrollDirection: Axis.horizontal,
           child: Container(
-            padding: const EdgeInsets.only(bottom: 8, top: 8),
+            padding: const EdgeInsets.fromLTRB(0, 8, defaultPadding, 8),
             child: Row(
               children: List.generate(
                 listItem.length,

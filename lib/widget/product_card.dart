@@ -26,12 +26,18 @@ class ProductCard extends StatelessWidget {
       child: Container(
         width: 150,
         // height: 200,
-        margin: const EdgeInsets.only(left: defaultPadding),
+        margin: const EdgeInsets.only(left: 4,right: 4),
         // padding: const EdgeInsets.all(defaultPadding / 2),
         decoration: BoxDecoration(
           color: white,
           borderRadius: const BorderRadius.all(Radius.circular(defaultBorderRadius)),
-          boxShadow: [BoxShadow(offset: const Offset(0, 2), blurRadius: 8, color: Colors.black.withOpacity(.2))],
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(0, 2),
+              blurRadius: 8,
+              color: Colors.black.withOpacity(.2),
+            ),
+          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

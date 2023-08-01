@@ -23,8 +23,9 @@ class NewArrival extends StatelessWidget {
           physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           scrollDirection: Axis.horizontal,
           child: Container(
-            padding: const EdgeInsets.only(bottom: 8, top: 8),
+            padding: const EdgeInsets.fromLTRB(defaultPadding, 8, defaultPadding, 8),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: List.generate(
                 listItem.length,
                 (index) => ProductCard(

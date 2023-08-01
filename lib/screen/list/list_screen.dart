@@ -46,39 +46,96 @@ class _ListPageState extends State<ListPage> {
         ],
       ),
       body: SafeArea(
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-            // childAspectRatio: 0.7,
-          ),
-          itemBuilder: (context, index) {
-            return ProductCard(
-              name: listItem[index].name,
-              price: listItem[index].price,
-              imageUrl: listItem[index].imageUrl,
-              bgColor: listItem[index].bgColor,
-              isLoved: listItem[index].isLoved,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ShoeDetail(
-                      imgAsset: listItem[index].imageUrl,
-                      shoePrice: listItem[index].price,
-                      shoeName: listItem[index].name,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+          child: GridView.builder(
+            physics: const BouncingScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+              // childAspectRatio: 0.9,
+            ),
+            itemBuilder: (context, index) {
+              return Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: white,
+                  boxShadow: [
+                    BoxShadow(offset: const Offset(0, 2), blurRadius: 5, color: Colors.black.withOpacity(.2))
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        const Positioned(
+                          left: 10,
+                          top: 10,
+                          child: Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                            size: 20,
+                          ),
+                        ),
+                        Image.asset(favoriteItem[index].imageUrl, height: 130),
+                      ],
                     ),
-                  ),
-                );
-              },
-            );
-          },
-          itemCount: listItem.length,
+                    const SizedBox(height: defaultPadding / 2),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8, right: 8),
+                      child: Text(
+                        favoriteItem[index].name,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Colors.black54),
+                      ),
+                    ),
+                    const SizedBox(height: defaultPadding / 4),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+                            child: Text(
+                              "\$ ${favoriteItem[index].price}",
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: const BoxDecoration(
+                            color: black,
+                            borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(defaultBorderRadius),
+                              topLeft: Radius.circular(defaultBorderRadius),
+                            ),
+                          ),
+                          child: const Icon(
+                            Icons.shopping_cart_checkout_rounded,
+                            size: 18,
+                            color: white,
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            },
+            itemCount: favoriteItem.length,
+          ),
         ),
       ),
     );
   }
+}
 
   // Widget _itemCard(
   //   Item item,
@@ -218,4 +275,4 @@ class _ListPageState extends State<ListPage> {
   //     ),
   //   );
   // }
-}
+
