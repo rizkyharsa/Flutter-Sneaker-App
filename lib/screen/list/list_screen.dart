@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_shop/constant.dart';
-import 'package:my_shop/screen/list/shoe_detail.dart';
-import 'package:my_shop/widget/product_card.dart';
+
 
 import '../../data/item.dart';
 
@@ -66,6 +65,7 @@ class _ListPageState extends State<ListPage> {
                   ],
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Stack(
                       children: [
@@ -78,7 +78,7 @@ class _ListPageState extends State<ListPage> {
                             size: 20,
                           ),
                         ),
-                        Image.asset(favoriteItem[index].imageUrl, height: 130),
+                        Image.asset(favoriteItem[index].imageUrl, height: 120),
                       ],
                     ),
                     const SizedBox(height: defaultPadding / 2),
@@ -120,9 +120,7 @@ class _ListPageState extends State<ListPage> {
                             color: white,
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(),
-                        )
+                        
                       ],
                     ),
                   ],
